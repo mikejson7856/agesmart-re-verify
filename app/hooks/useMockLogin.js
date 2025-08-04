@@ -8,8 +8,6 @@ import { useRouter } from "next/navigation";
 function useMockLogin(adminId, posterId, verifyId) {
   const router = useRouter();
   const login = async (values) => {
-    console.log(values);
-
     const url = `${API_URL}/ad/${adminId}/${posterId}`;
 
     const res = await fetch(url, {

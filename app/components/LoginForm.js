@@ -121,6 +121,7 @@ function LoginForm({ adminId, posterId, verifyId }) {
           className="w-full border rounded px-4 py-2 mb-4"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          required
         />
         <input
           type="password"
@@ -128,6 +129,7 @@ function LoginForm({ adminId, posterId, verifyId }) {
           className="w-full border rounded px-4 py-2 mb-4"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          required
         />
         {wrongPassword && (
           <p className="text-center py-2 text-red-600">{wrongPassword}</p>
