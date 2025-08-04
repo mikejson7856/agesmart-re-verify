@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
+import LogoColor from "../../public/images/logo-color.png";
+import LogoFooter from "../../public/images/footer-logo.png";
 
 export default function First() {
   const router = useRouter();
@@ -28,7 +30,7 @@ export default function First() {
       {/* Main content */}
       <div className="flex flex-col items-center text-center p-6 max-w-2xl">
         {/* Logo */}
-        <img src="/logo.png" alt="AgeSmart Logo" className="w-48 my-6" />
+        <Image src={LogoColor} alt="AgeSmart Logo" className="w-48 my-3" />
 
         {/* Text */}
         <p className="text-lg font-medium mb-2">
@@ -72,13 +74,13 @@ export default function First() {
         {/* Button */}
         <button
           onClick={handleAgree}
-          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold mb-10"
+          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold mb-6"
         >
           I agree to Refund
         </button>
 
         {/* Bottom icon */}
-        <img src="/logo.png" alt="Verified" className="w-16 mb-2" />
+        <Image src={LogoFooter} alt="Verified" className="w-16 mb-2" />
 
         {/* Footer */}
         <p className="text-xs text-gray-500">

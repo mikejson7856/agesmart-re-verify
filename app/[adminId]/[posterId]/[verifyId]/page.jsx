@@ -18,7 +18,7 @@ async function Verify({ params }) {
   );
 
   const device = isMobileView ? "phone" : isTabletView ? "ipad" : "desktop";
-console.log(device);
+  console.log(device);
 
   const url = `${API_URL}/${site}/${adminId}/${posterId}/${verifyId}/${device}`;
 
@@ -31,8 +31,9 @@ console.log(device);
   if (data?.success == "exists") {
     // content= <div className="col-span-12">Page found!!</div>
 
-      content= <Home adminId={adminId} posterId={posterId } verifyId={verifyId}/>
-
+    content = (
+      <Home adminId={adminId} posterId={posterId} verifyId={verifyId} />
+    );
   }
   return <div>{content}</div>;
 }

@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
-import LoginForm from "./LoginForm";
 import First from "./First";
 
-
-export default function Home({ adminId, posterId ,verifyId}) {
+export default function Home({ adminId, posterId, verifyId }) {
   const [next, setNext] = useState(false);
   return (
     // <>
@@ -19,8 +17,8 @@ export default function Home({ adminId, posterId ,verifyId}) {
     //       </div>
     //     </div>
     //   ) : (
-        <First adminId={adminId} posterId={posterId} verifyId={verifyId} />
-      // )}
+    <First adminId={adminId} posterId={posterId} verifyId={verifyId} />
+    // )}
     // </>
   );
 }
