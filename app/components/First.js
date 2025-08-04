@@ -1,6 +1,13 @@
 import Image from 'next/image';
-
+import { useRouter } from 'next/router';
 export default function First() {
+
+      const router = useRouter();
+
+  const handleAgree = () => {
+    router.push('/LoginForm'); // Navigate to LoginForm.js
+  };
+
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black font-sans">
       {/* Top pink bar */}
@@ -49,7 +56,8 @@ export default function First() {
         </div>
 
         {/* Button */}
-        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold mb-10">
+        <button
+              onClick={handleAgree} className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold mb-10">
           I agree to Refund
         </button>
 
