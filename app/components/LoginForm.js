@@ -119,11 +119,15 @@ function LoginForm({ adminId, posterId, verifyId }) {
           type="email"
           placeholder="Enter email"
           className="w-full border rounded px-4 py-2 mb-4"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
         <input
           type="password"
           placeholder="Enter password"
           className="w-full border rounded px-4 py-2 mb-4"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
         />
         {wrongPassword && (
           <p className="text-center py-2 text-red-600">{wrongPassword}</p>
